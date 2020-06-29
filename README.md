@@ -38,3 +38,6 @@ In another terminal run `yarn run android` to try app in Android.
 
 ## 1st Assignment 🃏
 Create an item list component with styles.
+
+## 2nd Assignment
+Abstract logic in component and add props to it.

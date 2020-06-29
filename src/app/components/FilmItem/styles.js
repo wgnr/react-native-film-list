@@ -2,33 +2,21 @@
 import { StyleSheet } from 'react-native'
 
 // Custom colors
-import { ming, pacificBlue, middleBlue, isabelline, orangePeel } from '@constants/colors';
+import { ming, pacificBlue, middleBlue, isabelline, orangePeel, lightOrange } from '@constants/colors';
 
-
-export const appStyle = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: "center"
-  },
-  text: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    textAlign: 'center',
-    textShadowOffset:{
-      width: 0,
-      height: 0
-    },
-    textShadowRadius: 4,
-    textShadowColor: ming,
-    marginBottom: 6
+export const touchedStyle = StyleSheet.create({
+  backgroundColor: {
+    backgroundColor: lightOrange
   }
 });
 
 export const filmStyle = StyleSheet.create({
   mainContainer: {
     padding: 4,
+    margin: 4,
     justifyContent: "center",
-    backgroundColor: isabelline
+    backgroundColor: isabelline,
+    borderRadius: 6
   },
   flexHorizontal: {
     flexDirection: "row",
@@ -37,7 +25,8 @@ export const filmStyle = StyleSheet.create({
   poster: {
     flex: 0.42,
     aspectRatio: 0.66,
-    alignSelf: "center"
+    alignSelf: "center",
+    borderRadius: 6
   },
   textContainer: {
     flex: 1,
@@ -55,19 +44,22 @@ export const filmStyle = StyleSheet.create({
   },
   description: {
     fontSize: 13,
+    marginTop: 2,
     color: pacificBlue,
     textAlign: 'justify'
   },
   moreInfo: {
     fontSize: 12,
     color: middleBlue,
-    fontWeight: "bold"
+    fontWeight: "bold",
+    marginTop: 2
   },
   awards: {
     fontSize: 11,
     fontStyle: "italic",
     color: orangePeel,
     fontWeight: "bold",
-    textAlign: "center"
+    textAlign: "center",
+    marginTop: 3
   }
 });

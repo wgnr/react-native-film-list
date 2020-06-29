@@ -8,3 +8,6 @@ export const pacificBlue = '#489fb5';
 export const middleBlue = '#82c0cc';
 export const isabelline = '#ede7e3';
 export const orangePeel = '#ffa62b';
+
+
+export const lightOrange = '#fbe6d4'
