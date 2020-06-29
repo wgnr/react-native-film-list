@@ -2,7 +2,7 @@
 
 
 
-## Setting-up environment
+### Setting-up environment
 Complete set up is [here](https://reactnative.dev/docs/environment-setup).
 
 1. Create a new React-Native project.
@@ -35,3 +35,6 @@ src
 
 4. Start service in a terminal using `yarn start --reset-cache` . We add the flag --reset-cache to have a clean development enviroment.
 In another terminal run `yarn run android` to try app in Android.
+
+## 1st Assignment 🃏
+Create an item list component with styles.
