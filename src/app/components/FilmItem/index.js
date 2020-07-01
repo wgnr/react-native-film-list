@@ -13,7 +13,7 @@ const FilmItem = ({ film }) => {
     const handlePress = () => {
         setTouched(!touched);
     };
-
+//
     // Used in numberOfLines. If is touched show entire text.
     const infLinesLogic = (touched, _default) => touched ? 0 : _default;
 
