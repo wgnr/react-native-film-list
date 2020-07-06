@@ -41,3 +41,6 @@ Create an item list component with styles.
 
 ## 2nd Assignment
 Abstract logic in component and add props to it.
+
+## 3rd Assignment
+Implement a [flatlist](https://reactnative.dev/docs/flatlist) and map with the created component.
