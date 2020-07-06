@@ -1,26 +1,22 @@
-/* eslint-disable react-native/no-inline-styles */
 import React from 'react';
 
-// Import React's Components
-import { SafeAreaView, Text } from 'react-native';
+// Styles
+import style from './styles.js';
 
-// Load our custom component
+// Components
+import { SafeAreaView, Text } from 'react-native';
 import FilmItem from '@components/FilmItem/index.js'
 
-// Styles
-import { appStyle as aS} from './styles.js';
-
 // Films data
-import { film01, film02, film03 } from '@assets/DB/films.js';
+import filmList from '@services/DB/index';
 
 
 const Home = () => {
   return (
-    <SafeAreaView style={aS.container}>
-      <Text style={aS.text}>My Favorite Films 🎞</Text>
-      <FilmItem film={film03} />
-      <FilmItem film={film01} />
-      <FilmItem film={film02} />
+    <SafeAreaView style={style.container}>
+      <Text style={style.text}>My Favorite Films 🎞</Text>
+      <FilmItem film={filmList[0]} />
+      <FilmItem film={filmList[1]} />
     </SafeAreaView>
   );
 };
