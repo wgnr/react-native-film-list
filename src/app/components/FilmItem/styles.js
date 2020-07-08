@@ -4,13 +4,10 @@ import { StyleSheet } from 'react-native'
 // Custom colors
 import { ming, pacificBlue, middleBlue, isabelline, orangePeel, lightOrange } from '@constants/colors';
 
-export const touchedStyle = StyleSheet.create({
-  backgroundColor: {
+const style = StyleSheet.create({
+  touchedMainContainer: {
     backgroundColor: lightOrange
-  }
-});
-
-export const filmStyle = StyleSheet.create({
+  },
   mainContainer: {
     padding: 4,
     margin: 4,
@@ -20,10 +17,9 @@ export const filmStyle = StyleSheet.create({
   },
   flexHorizontal: {
     flexDirection: "row",
-    alignItems: "flex-start"
   },
   poster: {
-    flex: 0.42,
+    flex: 0.32,
     aspectRatio: 0.66,
     alignSelf: "center",
     borderRadius: 6
@@ -63,3 +59,5 @@ export const filmStyle = StyleSheet.create({
     marginTop: 3
   }
 });
+
+export default style;

@@ -3,10 +3,9 @@ import { StyleSheet } from 'react-native'
 // Custom colors
 import { ming } from '@constants/colors';
 
-export const appStyle = StyleSheet.create({
+const style = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: "center",
   },
   text: {
     fontSize: 24,
@@ -21,3 +20,5 @@ export const appStyle = StyleSheet.create({
     marginBottom: 2
   }
 });
+
+export default style;
