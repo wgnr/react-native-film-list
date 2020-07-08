@@ -4,19 +4,23 @@ import React from 'react';
 import style from './styles.js';
 
 // Components
-import { SafeAreaView, Text } from 'react-native';
+import { SafeAreaView, Text, TouchableOpacity } from 'react-native';
 import FilmItem from '@components/FilmItem/index.js'
 
 // Films data
 import filmList from '@services/DB/index';
 
 
-const Home = () => {
+const Home = ({ navigation }) => {
+  const handleNavigateToList = () => navigation.navigate('HomeList');
   return (
     <SafeAreaView style={style.container}>
-      <Text style={style.text}>My Favorite Films 🎞</Text>
+      <TouchableOpacity style={style.button} onPress={handleNavigateToList}>
+        <Text style={style.text}>ESTO ES UN BOTON!</Text>
+      </TouchableOpacity>
       <FilmItem film={filmList[0]} />
-      <FilmItem film={filmList[1]} />
+      {/* <FilmItem film={filmList[1]} /> */}
+
     </SafeAreaView>
   );
 };

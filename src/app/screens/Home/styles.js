@@ -6,6 +6,14 @@ import { ming } from '@constants/colors';
 const style = StyleSheet.create({
   container: {
     flex: 1,
+    flexShrink: 1
+    // alignContent: "stretch",
+    // alignItems: "center"
+  },
+  button:{
+    borderWidth: 2,
+    padding: 4,
+    
   },
   text: {
     fontSize: 24,
@@ -17,7 +25,9 @@ const style = StyleSheet.create({
     },
     textShadowRadius: 4,
     textShadowColor: ming,
-    marginBottom: 2
+    marginVertical: 8,
+    borderColor: ming,
+    alignSelf: "center"
   }
 });
 

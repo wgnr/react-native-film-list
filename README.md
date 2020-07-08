@@ -44,3 +44,6 @@ Abstract logic in component and add props to it.
 
 ## 3rd Assignment
 Implement a [flatlist](https://reactnative.dev/docs/flatlist) and map with the created component.
+
+## 4th Assignment
+Implement [react-navigation](https://reactnavigation.org/) to navegate between two screens.
