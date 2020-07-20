@@ -4,11 +4,11 @@ import React from 'react';
 import style from './styles.js';
 
 // Components
-import { SafeAreaView, ListView, FlatList, View } from 'react-native';
+import { SafeAreaView } from 'react-native';
 import FilmItem from '@components/FilmItem';
 
-// Data
-import filmList from '@services/DB/index';
+// Moocked data
+// import filmList from '@services/DB/index';
 
 
 const HomeListMap = () => {
