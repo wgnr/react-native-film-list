@@ -36,11 +36,15 @@ src
 4. Start service in a terminal using `yarn start --reset-cache` . We add the flag --reset-cache to have a clean development enviroment.
 In another terminal run `yarn run android` to try app in Android.
 
-## 1st Assignment 🃏
-Create an item list component with styles.
-
-## 2nd Assignment
-Abstract logic in component and add props to it.
-
-## 3rd Assignment
-Implement a [flatlist](https://reactnative.dev/docs/flatlist) and map with the created component.
+## Asignments
+### 1. Create an item list component with styles.
+### 2. Abstract logic in component and add props to it.
+### 3. Implement a [flatlist](https://reactnative.dev/docs/flatlist) and map with the created component.
+### 4. Implement [react-navigation](https://reactnavigation.org/) to navegate between two screens.
+![Image of Yaktocat](./captures/4-Navigation.gif)
+### 5. Pass information among screens using `navigation`.
+![Image of Yaktocat](./captures/5-Navigation-pass-info.gif)
+### 6. Use `Context` to set a the App theme.
+![Image of Yaktocat](./captures/6-Context-theme.gif)
+### 7. Implement an HTTP request with [ApiSauce](https://github.com/infinitered/apisauce).
+![Image of Yaktocat](./captures/7-apisauce.gif)

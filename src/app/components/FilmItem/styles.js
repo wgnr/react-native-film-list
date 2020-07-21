@@ -2,18 +2,27 @@
 import { StyleSheet } from 'react-native'
 
 // Custom colors
-import { ming, pacificBlue, middleBlue, isabelline, orangePeel, lightOrange } from '@constants/colors';
+import {
+  TextMainLight,
+  TextSecondaryLight,
+  BackgroundComponentLight,
+  TextMainDark,
+  TextSecondaryDark,
+  BackgroundComponentDark,
+} from '@constants/colors';
 
 const style = StyleSheet.create({
-  touchedMainContainer: {
-    backgroundColor: lightOrange
-  },
   mainContainer: {
     padding: 4,
-    margin: 4,
+    margin: 2,
+    marginRight: 4,
+    marginLeft: 4,
+    borderRadius: 6,
     justifyContent: "center",
-    backgroundColor: isabelline,
-    borderRadius: 6
+    backgroundColor: BackgroundComponentLight,
+  },
+  mainContainerDark: {
+    backgroundColor: BackgroundComponentDark,
   },
   flexHorizontal: {
     flexDirection: "row",
@@ -31,33 +40,28 @@ const style = StyleSheet.create({
   title: {
     fontSize: 16,
     fontWeight: 'bold',
-    color: ming
+    color: TextMainLight
+  },
+  titleDark: {
+    color: TextMainDark
   },
   subTitle: {
     fontSize: 13,
     fontWeight: 'bold',
-    color: pacificBlue
+    color: TextSecondaryLight
+  },
+  subTitleDark: {
+    color: TextSecondaryDark
   },
   description: {
     fontSize: 13,
     marginTop: 2,
-    color: pacificBlue,
+    color: TextSecondaryLight,
     textAlign: 'justify'
   },
-  moreInfo: {
-    fontSize: 12,
-    color: middleBlue,
-    fontWeight: "bold",
-    marginTop: 2
+  descriptionDark: {
+    color: TextSecondaryDark,
   },
-  awards: {
-    fontSize: 11,
-    fontStyle: "italic",
-    color: orangePeel,
-    fontWeight: "bold",
-    textAlign: "center",
-    marginTop: 3
-  }
 });
 
 export default style;

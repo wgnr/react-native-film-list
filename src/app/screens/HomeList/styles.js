@@ -1,16 +1,19 @@
 import { StyleSheet } from 'react-native'
-import { isabelline } from '@constants/colors';
 
+// Custom colors
+import {
+  BackgroundLight,
+  BackgroundDark,
+} from '@constants/colors';
 
 const style = StyleSheet.create({
   container: {
-    flex: 1
+    flex: 1,
+    backgroundColor: BackgroundLight
   },
-  separator: {
-    height: 2,
-    backgroundColor: isabelline,
-    margin: 1
-  }
+  containerDark: {
+    backgroundColor: BackgroundDark
+  },
 });
 
 export default style;

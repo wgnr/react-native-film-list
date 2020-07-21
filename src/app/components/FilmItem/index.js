@@ -1,33 +1,45 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
+import { useNavigation } from '@react-navigation/native';
 
 // Styles
-import style from './styles.js';
+import style from './styles';
 
 // Components
 import { Text, View, Image, TouchableOpacity } from 'react-native';
 
+// Contexts
+import ThemeContext from '@contexts/ThemeContext'
 
 const FilmItem = ({ film }) => {
     const { // The film API that I'm use have capital letter for first letter, that's why i decided to rename all properties.
-        Poster: poster, Title: title,
-        Year: year, Genre: genre,
-        Runtime: runtime, Plot: plot } = film;
+        poster_path: poster, title: title,
+        release_date: year,
+        runtime: runtime, overview: plot } = film;
+    const yearOnly = year.slice(0, 4);
 
-    const [touched, setTouched] = useState(false);
+    // Navigation
+    const navigation = useNavigation();
+    const handleNavigateToDetail = () => navigation.navigate('FilmDetail', { film });
 
-    const handlePress = () => {
-        setTouched(!touched);
-    };
+    // Contexts
+    const { isLightTheme } = useContext(ThemeContext);
 
     return (
-        <TouchableOpacity onPress={handlePress}>
-            <View style={[style.mainContainer, touched && style.touchedMainContainer]}>
+        <TouchableOpacity onPress={handleNavigateToDetail}>
+
+            <View style={[style.mainContainer, isLightTheme || style.mainContainerDark]}>
+
                 <View style={style.flexHorizontal}>
+
                     <Image source={{ uri: poster }} style={style.poster} />
                     <View style={style.textContainer}>
-                        <Text style={style.title} numberOfLines={2} ellipsizeMode='tail'>{title} ({year})</Text>
-                        <Text style={style.subTitle} numberOfLines={1} ellipsizeMode='tail'>{runtime} - {genre}</Text>
-                        <Text style={style.description} numberOfLines={4} ellipsizeMode='tail'>{plot}</Text>
+
+                        <Text style={[style.title, isLightTheme || style.titleDark]}
+                            numberOfLines={2} ellipsizeMode='tail'>{title} ({yearOnly})</Text>
+                        <Text style={[style.subTitle, isLightTheme || style.subTitleDark]}
+                            numberOfLines={1} ellipsizeMode='tail'>{runtime} min</Text>
+                        <Text style={[style.description, isLightTheme || style.descriptionDark]}
+                            numberOfLines={4} ellipsizeMode='tail'>{plot}</Text>
                     </View>
                 </View>
             </View>
